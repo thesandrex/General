@@ -36,3 +36,33 @@ What should we define in our project:
 ## Visualisation in project
 
 ![Retention_Rate](https://i.ibb.co/P46R4kV/retentionrate.png "Retention Rate")
+
+![AverageCheck](https://i.ibb.co/z4HMFXB/Average-Check.png "Average Check")
+
+### Cumulative LTV by lifetime cohorts
+![LTV](https://i.ibb.co/1G91gMn/LTV.png "LTV")
+
+## Lifetime cohorts estimate example
+
+'''python
+
+#select activity month and first activity month
+
+orders['activity_month'] = orders['buy_ts'].astype('datetime64[M]')
+orders['first_activity_month'] = orders['first_activity_date'].astype('datetime64[M]')
+
+#activity month take away first activity month equal lifetime period by month
+
+orders['cohort_lifetime'] =(
+    orders['activity_month'] - orders['first_activity_month']
+)
+
+orders['cohort_lifetime'] = ( 
+    orders['cohort_lifetime'] / np.timedelta64(1, 'M')
+)
+
+orders['cohort_lifetime'] = orders['cohort_lifetime'].round().astype('int')
+
+cohorts = orders.groupby(['first_activity_month', 'cohort_lifetime']).agg({'uid':'nunique'}).reset_index()
+
+'''
