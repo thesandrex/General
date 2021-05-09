@@ -39,7 +39,7 @@ What should we define in our project:
 
 ![AverageCheck](https://i.ibb.co/z4HMFXB/Average-Check.png "Average Check")
 
-### Cumulative LTV by lifetime cohorts
+#### Cumulative LTV by lifetime cohorts
 ![LTV](https://i.ibb.co/1G91gMn/LTV.png "LTV")
 
 ## Lifetime cohorts estimate example
@@ -66,3 +66,7 @@ orders['cohort_lifetime'] = orders['cohort_lifetime'].round().astype('int')
 cohorts = orders.groupby(['first_activity_month', 'cohort_lifetime']).agg({'uid':'nunique'}).reset_index()
 
 ```
+
+## Conclusion
+
+As a result we got conclusions and recomendations for more effective use of advertising funds.
