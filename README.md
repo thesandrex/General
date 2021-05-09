@@ -35,4 +35,4 @@ What should we define in our project:
 
 ## Visualisation in project
 
-![Retention_Rate](https://ibb.co/zb41bdt "Retention Rate")
+![Retention_Rate](https://i.ibb.co/P46R4kV/retentionrate.png "Retention Rate")
