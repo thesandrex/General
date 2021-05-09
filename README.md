@@ -44,7 +44,7 @@ What should we define in our project:
 
 ## Lifetime cohorts estimate example
 
-'''python
+```python
 
 #select activity month and first activity month
 
@@ -65,4 +65,4 @@ orders['cohort_lifetime'] = orders['cohort_lifetime'].round().astype('int')
 
 cohorts = orders.groupby(['first_activity_month', 'cohort_lifetime']).agg({'uid':'nunique'}).reset_index()
 
-'''
+```
