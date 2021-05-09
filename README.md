@@ -21,3 +21,18 @@ What should we define in our project:
 2. When they usually make the first orders on the website;
 3. How much each costumer brings to our company;
 4. When costs for costumers attraction pay off.
+
+## Metrics counting in project
+
+* user activity metrics - dau, mau, wau;
+* Average session duration - ASL;
+* Retention Rate (cohort analysis is performed);
+* Average check (cohort analysis is performed);
+* "Lifetime" customer value (LTV) by "age" cohorts;
+* Marketing costs by source;
+* Cost of user engagement (CAC);
+* ROMI by source.
+
+## Visualisation in project
+
+![Retention_Rate](https://ibb.co/zb41bdt "Retention Rate")
